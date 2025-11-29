@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Click anywhere to toggle.</title>
+    <style>
+    * {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      height: 100%;
+      margin: 10;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      background-color: var(--bg-color);
+    }
+
+    input[type=checkbox] {
+      -webkit-appearance: none;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      border: none;
+      display: block;
+      background-color: var(--bg-color);
+      transition: background-color 1s;
+    }
+
+    input[type=checkbox]:checked {
+      transition: background-color 1s;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 20px;
+      display: block;
+    }
+    </style>
+  </head>
+    
+  <body>
+  <input type="checkbox">  
+  <script src="fun.js"></script>
+  <button class="button"onclick="location.href='../index.html'">Back to Main Page</button>
+  </body>
+  
+</html>
