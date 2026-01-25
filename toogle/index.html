@@ -11,20 +11,21 @@
 
     html {
       height: 100%;
-      margin: 10;
+      margin: 0;
     }
 
     body {
-      height: 100%;
-      width: 100%;
+      position: relative;
+      min-height: 100vh;
       margin: 0;
       background-color: var(--bg-color);
+      overflow: hidden;
     }
 
-    input[type=checkbox] {
+    .toggle-fill {
       -webkit-appearance: none;
-      height: 100%;
-      width: 100%;
+      position: fixed;
+      inset: 0;
       margin: 0;
       padding: 0;
       outline: none;
@@ -32,26 +33,33 @@
       display: block;
       background-color: var(--bg-color);
       transition: background-color 1s;
+      z-index: 0;
     }
 
-    input[type=checkbox]:checked {
+    .toggle-fill:checked {
       transition: background-color 1s;
     }
 
     .button {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
       background-color: black;
       color: white;
       border-radius: 10px;
       padding: 10px 20px;
-      display: block;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
     }
     </style>
   </head>
     
   <body>
-  <input type="checkbox">  
+  <input class="toggle-fill" type="checkbox" aria-label="Toggle background color">  
   <script src="fun.js"></script>
-  <button class="button"onclick="location.href='../index.html'">Back to Main Page</button>
+  <button class="button" onclick="location.href='../index.html'">Back to Main Page</button>
   </body>
   
 </html>
