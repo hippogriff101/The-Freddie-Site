@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNDER MAINTENANCE</title>
+    <title>Hippogriff - Freddie Yershon</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
     <style>
         footer {
             margin-top: 50px;
@@ -14,28 +21,49 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to the Freddie Site!</h1>
+    <marquee>
+        <h1>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+          <span>Freddie</span>
+          <span>Yershon</span>
+        </h1>
+    </marquee>
+    <hr>
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+the+Freddie+Site!" alt="Typing SVG" /></a>    <p>My name is Freddie and I enjoy coding! Right now I'm helping run events for <a href="https://hackclub.com">Hack Club</a>.</p>
     <p>This site is currently under maintenance. Please check back later for updates.</p>
-    <p>If you want to contact me please use the link below:</p>
+    <p>If you want to contact me please use the email below:</p>
     <a href="mailto:hello@freddieyershon.co.uk">Email</a>
     <h2>While ya wait!</h2>
     <button type="button" onclick="location.href='toogle/'">Go to Toggle game...</button>
     <br><br>
     <button type="button" onclick="location.href='https://blog.freddieyershon.co.uk'">Go to my <i>awsome</i> Blog!</button>
     <br><br>
-    <p>I've been working on a cool NEW Hack Club project!</p>
-    <a href="https://woof.hackclub.com">Check it out here!</a>
+    <p>I've been working on some cool NEW Hack Club project!</p>
+    <a href="https://vibes.hackclub.com">Check it out here!</a>
     <h2>Want something to look at?</h2>
     <a href="https://github.com/hippogriff101">My GitHub is <s>kinda</s> <b>VERY</b> cool!</a>
     <br>
     <a href="https://eehshack.club">You <b>NEED</b> to look at my club website, it took me ages!</a>
     <br>
-    <a href="https://musicalfreddieyershon.co.uk">My Musicals Site!</a>
-    <br>
-    <a href="https://rooted.hackclub.com">I made part of this, cool isn't it? <i>(Rooted Hack Club)</i></a>
+    <a href="https://musicals.freddieyershon.co.uk">My Musicals Site!</a>
     <footer>
         <p>All rights kinda reserved. Made with ❤️ by Freddieeeeeeeeee</p>
-        <p>Site currently under maintenance as of Nov 2025!</p>
+        <p>Site currently under maintenance as of April 2026!</p>
         <p>"The lack of CSS is intentional." - <a href="https://zachlatta.com/">Zach Latta</a></p>
         <br>
         <iframe
@@ -46,6 +74,55 @@
             scrolling="no"
             alt="Hack Club Webring!"
         ></iframe>
+        <br>
+        <div class="footer-commit" id="footer-commit" data-owner="hippogriff101" data-repo="The-Freddie-Site">
+            <a
+                class="commit-link"
+            href="https://github.com/hippogriff101/The-Freddie-Site/commits/main"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+            <span class="commit-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
+            <span class="commit-text">Latest commit</span>
+            <span class="commit-hash">(latest)</span>
+            </a>
+        </div>
     </footer>
 </body>
+<script>
+  (function () {
+    var root = document.getElementById("footer-commit");
+    if (!root) return;
+
+    var owner = root.getAttribute("data-owner");
+    var repo = root.getAttribute("data-repo");
+    var link = root.querySelector(".commit-link");
+    var text = root.querySelector(".commit-text");
+    var hash = root.querySelector(".commit-hash");
+
+    if (!owner || !repo || !link || !text || !hash) return;
+
+    fetch("https://api.github.com/repos/" + owner + "/" + repo + "/commits?per_page=1")
+      .then(function (res) {
+        if (!res.ok) throw new Error("GitHub API request failed");
+        return res.json();
+      })
+      .then(function (commits) {
+        if (!Array.isArray(commits) || commits.length === 0) return;
+
+        var latest = commits[0];
+        if (!latest.sha || !latest.html_url) return;
+
+        link.href = latest.html_url;
+        if (latest.commit && latest.commit.message) {
+          var message = latest.commit.message.split("\n")[0].trim();
+          if (message) text.textContent = message;
+        }
+        hash.textContent = "(" + latest.sha.slice(0, 7) + ")";
+      })
+      .catch(function () {
+        // Keep fallback link and text when API is unavailable.
+      });
+  })();
+</script>
 </html>
