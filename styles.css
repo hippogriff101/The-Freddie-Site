@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Jersey';
+  src: url('assets/Jersey10-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    font-size: smaller;
+
+    background-color: #E6EEC9;
+    color: #7DA78C;
+    font-family: Jersey;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #35858E;
+}
+a:hover {
+    color: #C2D099;
+    text-decoration: underline;
+    transform: scale(1.05);
+
+}
