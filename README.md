@@ -4,10 +4,12 @@ After buying this domain in November 2025 with a [Summer of Making](https://summ
 
 It is not finished, more to come.
 
-This is Version three now - submitted to [Macondo](https://macondo.hackclub.com/)
+This is Version Three, submitted to [Macondo](https://macondo.hackclub.com/)
 
 ## Credits
 
-Font - Jersey 10 Regular 
+Font - [Jersey 10 Regular ](assets/OFL.txt)
 
 Inspo - [Zaid](https://github.com/zaid45645) & [brny](https://github.com/angrypig555/)
+
+Icons - https://icons.hackclub.com/
