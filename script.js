@@ -1,5 +1,5 @@
 (function () {
-console.log("Hey, welcome fellow coder!")
+console.log("Hey, welcome to my sight fellow coder!")
 var root = document.getElementById("footer-commit");
 if (!root) return;
 
