@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Jersey';
+  src: url('assets/Jersey10-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    padding: 20px;
+    text-align: center;
+    font-size: smaller;
+
+    background-color: #E6EEC9;
+    color: #7DA78C;
+    font-family: Jersey;
+    font-size: 1.5rem;
+}
+
+footer {
+    font-style: italic;
+    font-size: 1.3rem;
+}
+a {
+    color: #35858E;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+a:hover {
+    color: #4CA6B1;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+.links svg {
+    width: 150px;
+    height: 50px;
+}
+
+.links a {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+    transform: scale(1.3);
+}
+
+#hackclub {
+    color: #ec3750;
+}
+
+/* All Github  footer stuff is AI assisted*/
+
+.commit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.commit-icon svg {
+    width: 0.9em;
+    height: 0.9em;
+    display: block;
+}
