@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Jersey';
-  src: url('assets/Jersey10-Regular.ttf') format('truetype');
+  src: url('assets/font/Jersey10-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,6 +22,7 @@ footer {
     font-style: italic;
     font-size: 1.3rem;
 }
+
 a {
     color: #35858E;
     text-decoration: none;
@@ -45,6 +46,17 @@ a:hover {
 
 .links a:hover {
     transform: scale(1.3);
+}
+
+.photos img {
+    width: 200px;
+    height: auto;
+    border: #35858E solid 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.photos img:hover {
+    transform: scale(1.1);
 }
 
 #hackclub {

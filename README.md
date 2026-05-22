@@ -8,7 +8,7 @@ This is Version Three, submitted to [Macondo](https://macondo.hackclub.com/)
 
 ## Credits
 
-Font - [Jersey 10 Regular ](assets/OFL.txt)
+Font - [Jersey 10 Regular ](assets/font/OFL.txt)
 
 Inspo - [Zaid](https://github.com/zaid45645) & [brny](https://github.com/angrypig555/)
 
