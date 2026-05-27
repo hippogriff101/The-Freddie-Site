@@ -1,5 +1,30 @@
 (function () {
-console.log("Hey, welcome to my sight fellow coder!")
+console.log("Hey, welcome to my site fellow coder!")
+
+getLatestPost().then(post => {
+  const title = document.getElementById("post-title");
+  const date = document.getElementById("post-date");
+  const postLink = document.getElementById("post-link");
+
+  if (title) {
+    title.textContent = post.title;
+  }
+
+  if (date) {
+    date.textContent = new Date(post.date).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  if (postLink) {
+    postLink.href = post.link;
+  }
+}).catch(function (error) {
+  console.error("Blog fetch error:", error);
+});
+
 var root = document.getElementById("footer-commit");
 if (!root) return;
 
@@ -34,3 +59,27 @@ fetch("https://api.github.com/repos/" + owner + "/" + repo + "/commits?per_page=
     console.error("GitHub API Error:", error);
     });
 })();
+
+async function getLatestPost() {
+  const res = await fetch("https://blog.freddieyershon.co.uk/feed.xml");
+  const text = await res.text();
+
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(text, "text/xml");
+
+  const entry = xml.querySelector("entry");
+
+  if (!entry) {
+    throw new Error("No blog entry found in feed");
+  }
+
+  const title = entry.querySelector("title").textContent;
+  const date = entry.querySelector("updated").textContent;
+  const link = entry.querySelector("link").getAttribute("href");
+
+  return {
+    title,
+    date,
+    link
+  };
+}
