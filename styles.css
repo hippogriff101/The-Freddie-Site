@@ -34,6 +34,23 @@ a:hover {
     font-size: 1.1em;
 }
 
+button {
+    color: #E6EEC9;
+    border-radius: 25px;
+    background-color: #35858E;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+button:hover {
+    background-color: #4CA6B1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .links svg {
     width: 150px;
     height: 50px;
@@ -57,6 +74,42 @@ a:hover {
 
 .photos img:hover {
     transform: scale(1.1);
+}
+
+.blog {
+    height: 200px;
+    width: auto;
+    background-color: #35858E;
+    transition: all 0.2s ease-in-out;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.blog:hover {
+    transform: scale(1.01);
+}
+
+.blog h2 {
+    color: #E6EEC9;
+    margin-bottom: 0;
+}
+
+.blog small {
+    display: block;
+    margin-top: 0;
+}
+
+.blog a {
+    color: #E6EEC9;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+.blog a:hover {
+    text-decoration: underline;
+    font-size: 1.em;
 }
 
 #hackclub {
