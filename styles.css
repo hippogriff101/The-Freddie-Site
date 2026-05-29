@@ -10,8 +10,6 @@ body {
     max-width: none;
     padding: 20px;
     text-align: center;
-    font-size: smaller;
-
     background-color: #E6EEC9;
     color: #7DA78C;
     font-family: Jersey;
@@ -38,12 +36,9 @@ button {
     color: #E6EEC9;
     border-radius: 25px;
     background-color: #35858E;
-    text-decoration: none;
     transition: all 0.2s ease-in-out;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
 }
 button:hover {
     background-color: #4CA6B1;
@@ -77,19 +72,14 @@ button:hover {
 }
 
 .blog {
-    height: 200px;
     width: auto;
+    height: 200px;
     background-color: #35858E;
-    transition: all 0.2s ease-in-out;
-    padding: 5px 5px;
+    padding: 2.5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     text-decoration: none;
 
-}
-
-.blog:hover {
-    transform: scale(1.01);
 }
 
 .blog h2 {
@@ -109,7 +99,7 @@ button:hover {
 }
 .blog a:hover {
     text-decoration: underline;
-    font-size: 1.em;
+    font-size: 1.7rem;
 }
 
 #hackclub {
