@@ -104,6 +104,8 @@ button:hover {
 
 #mybutton img {
     transition: all 0.2s ease-in-out;
+    height: 31px;
+    width: 88px;
 }
 
 #mybutton img:hover {
