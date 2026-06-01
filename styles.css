@@ -102,9 +102,17 @@ button:hover {
     font-size: 1.7rem;
 }
 
+#mybutton img {
+    transition: all 0.2s ease-in-out;
+}
+
+#mybutton img:hover {
+    transform: scale(1.5);
+}
 #hackclub {
     color: #ec3750;
 }
+
 
 /* All Github  footer stuff is AI assisted*/
 
