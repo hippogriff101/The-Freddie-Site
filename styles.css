@@ -129,3 +129,9 @@ button:hover {
     height: 0.9em;
     display: block;
 }
+
+pagering-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
