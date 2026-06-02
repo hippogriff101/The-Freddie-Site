@@ -1,3 +1,4 @@
+// OK, I don't know JS, pretty much all of this JavaScript doc is vibecoded! Thats ok, right? We can still be friends? :sob: 
 (function () {
 console.log("Hey, welcome to my site fellow coder!")
 
@@ -83,3 +84,65 @@ async function getLatestPost() {
     link
   };
 }
+
+// 1. Define the formatting options
+const options = {
+  timeZone: 'Europe/London',
+  month: 'long',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false 
+};
+
+// New option specifically to get the full weekday name (e.g., "Thursday")
+const weekdayOptions = {
+  timeZone: 'Europe/London',
+  weekday: 'long'
+};
+
+const formatter = new Intl.DateTimeFormat([], options);
+const weekdayFormatter = new Intl.DateTimeFormat([], weekdayOptions);
+
+// Helper function to get the correct ordinal suffix (st, nd, rd, th)
+function getOrdinalSuffix(day) {
+  if (day > 3 && day < 21) return 'th';
+  switch (day % 10) {
+    case 1:  return "st";
+    case 2:  return "nd";
+    case 3:  return "rd";
+    default: return "th";
+  }
+}
+
+// 2. Initialize the variable where your pretty date will live
+let currentLondonTime = "";
+
+// 3. Create the update function
+const updateTimeVariable = () => {
+  const now = new Date();
+  
+  // Get the day number specifically for London
+  const londonDay = parseInt(now.toLocaleDateString('en-GB', { timeZone: 'Europe/London', day: 'numeric' }));
+  
+  // Get the weekday string (e.g., "Tuesday")
+  const weekday = weekdayFormatter.format(now);
+  
+  // Format the rest of the date (e.g., "June 2026, 15:16")
+  const parts = formatter.format(now); 
+  
+  // Combine them: "Tuesday, 2nd June 2026, 15:16"
+  currentLondonTime = `${weekday}, ${londonDay}${getOrdinalSuffix(londonDay)} ${parts}`;
+  
+  // Update your DOM element inside the interval so it actually refreshes on screen
+  const dateElement = document.getElementById("date");
+  if (dateElement) {
+    dateElement.textContent = currentLondonTime;
+  }
+  
+  console.log("Variable updated:", currentLondonTime);
+};
+
+// 4. Run immediately and set the 1-minute interval
+updateTimeVariable();
+setInterval(updateTimeVariable, 60000);
