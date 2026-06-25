@@ -101,8 +101,8 @@ const weekdayOptions = {
   weekday: 'long'
 };
 
-const formatter = new Intl.DateTimeFormat([], options);
-const weekdayFormatter = new Intl.DateTimeFormat([], weekdayOptions);
+const formatter = new Intl.DateTimeFormat('en-GB', options);
+const weekdayFormatter = new Intl.DateTimeFormat('en-GB', weekdayOptions);
 
 // Helper function to get the correct ordinal suffix (st, nd, rd, th)
 function getOrdinalSuffix(day) {
