@@ -7,27 +7,51 @@
     <title>Freddie Yershon</title>
     <link rel="icon" type="image/x-icon" href="/assets/pixel-dog.ico">
     <link href="../styles.css" rel="stylesheet">
+    <link href="projects.css" rel="stylesheet">
 </head>
 <body>
     <h1>Freddie Yershon</h1>
     <small>/ <a href="../">home</a> / <a href="../now/">now</a> / <a href="./">projects</a> / <a href="../photo/">photos</a> / <a href="../guest/">guestbook</a> / <a target="_blank" rel="noopener noreferrer" href="https://blog.freddieyershon.co.uk">blog</a> /</small>
     <hr>
     <h2>Projects</h2>
-    <p>Looks like there is nothing here <i>yet</i>! Check back soon.</p>
+    <div class="projects">
+        <div class="project">
+            <h3>The Freddie Site</h3>
+            <img width="450px" src="https://cdn.hackclub.com/019efda9-b896-71db-b121-cd08fb3a24aa/image.png">
+            <p><i>Hey that looks familiar...</i> it's the website you are on NOW! This is my personal site, I'm very proud of how it turned out and looks very nice. :></p>
+            <a target="_blank" rel="noopener noreferrer" href="https://freddieyershon.co.uk"><button type="button">Demo</button></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/hippogriff101/The-Freddie-Site"><button type="button">Code</button></a>
+        </div>
+        <div class="project">
+            <h3>Red Light Green Light</h3>
+            <img width="450px" src="https://cdn.hackclub.com/019e6b2d-8f40-7055-8545-ba1797f27a62/image.png">
+            <p><i>My first hardware project!</i> I made this project for Macondo using an ESP32 kit.</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=T1XPNQFDfY8"><button type="button">Demo</button></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/hippogriff101/RedLightGreenLight"><button type="button">Code</button></a>
+            <br>
+        </div>
+        <div class="project">
+            <h3>Meof</h3>
+            <img width="450px" src="https://cdn.hackclub.com/019e025a-6884-7460-ab44-4adf9d90c23a/image.png">
+            <p>A Flask app I made (with help from @dsg with code & @brny for art) for a WIP YSWS called Meof!</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://meof.vercel.app"><button type="button">Demo</button></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/hippogriff101/meof"><button type="button">Code</button></a>
+            <br>
+        </div>
+        <div class="project">
+            <h3>MaracaAI</h3>
+            <img width="450px" src="https://cdn.hackclub.com/019efe42-1808-7e1f-be76-afafb7df4cbf/image.png">
+            <p>This is a voice-controlled AI chatbot made in Python using Hack Club AI!</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://pypi.org/project/maracaai/"><button type="button">Demo</button></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/hippogriff101/MaracaAI"><button type="button">Code</button></a>
+            <br>
+        </div>
+    </div>
     <footer>
     <hr>
       <p>Made with ❤️ by Freddie</p>
       <p>This site is inspired by <a target="_blank" rel="noopener noreferrer" href="https://zaids-bunker.vercel.app/">Zaid's Bunker</a> and <a target="_blank" rel="noopener noreferrer" href="https://brny.dev/">brny.dev</a>!</p>
-      <br>
-      <iframe
-          src="https://webring.hackclub.com/embed.html"
-          width="150"
-          height="50"
-          frameborder="0"
-          scrolling="no"
-          alt="Hack Club Webring!"
-      ></iframe>
-      <br>
+      <pagering-link theme="light"></pagering-link>
 <!-- All Github  footer stuff is vibe coded :sob:!! -->
       <div class="footer-commit" id="footer-commit" data-owner="hippogriff101" data-repo="The-Freddie-Site">
           <a
@@ -49,5 +73,6 @@
     <script src="../script.js"></script>
     <script data-goatcounter="https://hippogriff.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+    <script src="https://pagering.gideon.sh/embed.js" defer></script>
 </body>
 </html>
