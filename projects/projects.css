@@ -1,0 +1,49 @@
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.project {
+    width: auto;
+    height: auto;
+    background-color: #35858E;
+    color: #E6EEC9;
+    padding: 5px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+.project h3 {
+    opacity: 5;
+}
+
+.project img {
+    height: auto;
+    border-style: solid;
+    border-color: #7DA78C;
+    border-width: 5px;
+}
+
+.project p {
+    opacity: 5;
+}
+
+.project button {
+    background-color: #7DA78C;
+    border-radius: 25px;
+    color: #E6EEC9;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 20px;
+    border: none;
+}
+.project button:hover {
+    background-color: #4CA6B1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
