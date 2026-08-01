@@ -16,7 +16,7 @@ Icons - https://icons.hackclub.com/
 
 ### AI Transparency
 
-As doccumened on Macondo and commented to `script.js`, I dont' really know JavaScript and used AI to help add in most of the js doc. I just wanted that to be here and clear.
+As documened on Macondo and commented to `script.js`, I dont' really know JavaScript and used AI to help add in most of the js doc. I just wanted that to be here and clear.
 
 ### License
 

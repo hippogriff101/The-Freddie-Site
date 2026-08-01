@@ -6,13 +6,22 @@
   font-display: swap;
 }
 
+:root {
+    --color-bg: #E6EEC9;
+    --color-text: #7DA78C;
+    --color-primary: #35858E;
+    --color-primary-hover: #4CA6B1;
+    --color-on-primary: var(--color-bg);
+    --font-family-base: 'Jersey', sans-serif;
+    --transition-fast: 0.2s ease-in-out;
+}
 body {
     max-width: none;
     padding: 20px;
     text-align: center;
-    background-color: #E6EEC9;
-    color: #7DA78C;
-    font-family: Jersey;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
     font-size: 1.5rem;
 }
 
@@ -22,26 +31,26 @@ footer {
 }
 
 a {
-    color: #35858E;
+    color: var(--color-primary);
     text-decoration: none;
-    transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
+    transition: color var(--transition-fast), font-size var(--transition-fast);
 }
 a:hover {
-    color: #4CA6B1;
+    color: var(--color-primary-hover);
     text-decoration: underline;
     font-size: 1.1em;
 }
 
 button {
-    color: #E6EEC9;
+    color: var(--color-on-primary);
     border-radius: 25px;
-    background-color: #35858E;
-    transition: all 0.2s ease-in-out;
+    background-color: var(--color-primary);
+    transition: all var(--transition-fast);
     padding: 10px 20px;
     border: none;
 }
 button:hover {
-    background-color: #4CA6B1;
+    background-color: var(--color-primary-hover);
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -63,8 +72,8 @@ button:hover {
 .photos img {
     width: 200px;
     height: auto;
-    border: #35858E solid 3px;
-    transition: all 0.2s ease-in-out;
+    border: var(--color-primary) solid 3px;
+    transition: all var(--transition-fast);
 }
 
 .photos img:hover {
@@ -74,7 +83,7 @@ button:hover {
 .blog {
     width: auto;
     height: 200px;
-    background-color: #35858E;
+    background-color: var(--color-primary);
     padding: 2.5px;
     border: none;
     border-radius: 25px;
@@ -83,7 +92,7 @@ button:hover {
 }
 
 .blog h2 {
-    color: #E6EEC9;
+    color: var(--color-on-primary);
     margin-bottom: 0;
 }
 
@@ -93,9 +102,9 @@ button:hover {
 }
 
 .blog a {
-    color: #E6EEC9;
+    color: var(--color-on-primary);
     text-decoration: none;
-    transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
+    transition: color var(--transition-fast), font-size var(--transition-fast);
 }
 .blog a:hover {
     text-decoration: underline;
@@ -103,7 +112,7 @@ button:hover {
 }
 
 #mybutton img {
-    transition: all 0.2s ease-in-out;
+    transition: all var(--transition-fast);
     height: 31px;
     width: 88px;
 }

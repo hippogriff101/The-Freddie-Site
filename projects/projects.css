@@ -6,13 +6,13 @@
 .project {
     width: auto;
     height: auto;
-    background-color: #35858E;
-    color: #E6EEC9;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
     padding: 5px;
     border: none;
     border-radius: 25px;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: all var(--transition-fast);
 }
 
 .project:hover {
@@ -25,7 +25,7 @@
 .project img {
     height: auto;
     border-style: solid;
-    border-color: #7DA78C;
+    border-color: var(--color-text);
     border-width: 5px;
 }
 
@@ -34,15 +34,15 @@
 }
 
 .project button {
-    background-color: #7DA78C;
+    background-color: var(--color-text);
     border-radius: 25px;
-    color: #E6EEC9;
-    transition: all 0.2s ease-in-out;
+    color: var(--color-on-primary);
+    transition: all var(--transition-fast);
     padding: 10px 20px;
     border: none;
 }
 .project button:hover {
-    background-color: #4CA6B1;
+    background-color: var(--color-primary-hover);
     transform: scale(1.1);
     cursor: pointer;
 }
