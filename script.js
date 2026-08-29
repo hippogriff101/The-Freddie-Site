@@ -146,3 +146,28 @@ const updateTimeVariable = () => {
 // 4. Run immediately and set the 1-minute interval
 updateTimeVariable();
 setInterval(updateTimeVariable, 60000);
+
+// Info button popup
+(function () {
+  const button = document.getElementById("info-button");
+  const overlay = document.getElementById("info-overlay");
+  const closeButton = document.getElementById("info-close");
+  if (!button || !overlay || !closeButton) return;
+
+  function openOverlay() {
+    overlay.hidden = false;
+  }
+
+  function closeOverlay() {
+    overlay.hidden = true;
+  }
+
+  button.addEventListener("click", openOverlay);
+  closeButton.addEventListener("click", closeOverlay);
+  overlay.addEventListener("click", function (event) {
+    if (event.target === overlay) closeOverlay();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !overlay.hidden) closeOverlay();
+  });
+})();

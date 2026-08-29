@@ -2,8 +2,6 @@
 
 After buying this domain in November 2025 with a [Summer of Making](https://summer.hackclub.com) Grant I'm finally making a proper, well made site. 
 
-It is not finished, more to come.
-
 This is Version Three, submitted to [Macondo](https://macondo.hackclub.com/)
 
 ## Credits
