@@ -1,0 +1,36 @@
+[
+    {
+        "name": "The Freddie Site",
+        "description": "<i>Hey that looks familiar...</i> it's the website you are on NOW! This is my personal site, I'm very proud of how it turned out. Only it's 4th iteration",
+        "image": "https://cdn.hackclub.com/019efda9-b896-71db-b121-cd08fb3a24aa/image.png",
+        "demo": "https://freddieyershon.co.uk",
+        "code": "https://github.com/hippogriff101/The-Freddie-Site"
+    },
+    {
+        "name": "Red Light Green Light",
+        "description": "<i>My first hardware project!</i> I made this project for Macondo using an ESP32 kit.",
+        "image": "https://cdn.hackclub.com/019e6b2d-8f40-7055-8545-ba1797f27a62/image.png",
+        "demo": "https://www.youtube.com/watch?v=T1XPNQFDfY8",
+        "code": "https://github.com/hippogriff101/RedLightGreenLight"
+    },
+    {
+        "name": "Meof",
+        "description": "A Flask app I made (with help from @dsg with code & @brny for art) for a WIP YSWS called Meof!",
+        "image": "https://cdn.hackclub.com/019e025a-6884-7460-ab44-4adf9d90c23a/image.png",
+        "demo": "https://meof.vercel.app",
+        "code": "https://github.com/hippogriff101/meof"
+    },
+    {
+        "name": "An Inspector Calls API",
+        "description": "A simple Express API to get An Inspector Calls quotes!",
+        "image": "",
+        "demo": "https://aic.freddieyershon.co.uk/",
+        "code": "https://github.com/hippogriff101/aic-api"
+    },
+    {
+        "name": "SlackThings",
+        "description": "Simple Slack commands using the Flaron API",
+        "image": "https://cdn.hackclub.com/019ffc6f-e771-7c6b-be91-4436717ccdae/Screenshot%202026-08-11%20214519.png",
+        "code": "https://github.com/hippogriff101/SlackThings/"
+    }
+]

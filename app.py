@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
 
+with open(app.static_folder + "/projects.json", encoding="utf-8") as f:
+    project_list = json.load(f)
 
 @app.route("/")
 def index():
@@ -15,7 +18,7 @@ def now():
 
 @app.route("/projects/")
 def projects():
-    return render_template("projects.html")
+    return render_template("projects.html", projects=project_list)
 
 
 @app.route("/photo/")
