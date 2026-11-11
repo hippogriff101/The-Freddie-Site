@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hi, I'm Freddie, a teen coder from London. Welcome to my website!">
-    <title>Freddie Yershon</title>
-    <link rel="icon" type="image/x-icon" href="assets/pixel-dog.ico">
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Freddie Yershon</h1>
-    <small>/ <a href="/">home</a> / <a href="/now/">now</a> / <a href="/projects/">projects</a> / <a href="/photo/">photos</a> / <a href="/guest/">guestbook</a> / <a target="_blank" rel="noopener noreferrer" href="https://blog.freddieyershon.co.uk">blog</a> /</small>
+{% extends "base.html" %}
+
+{% block description %}Hi, I'm Freddie, a teen coder from London. Welcome to my website!{% endblock %}
+
+{% block content %}
     <pagering-link theme="light"></pagering-link>
     <button id="info-button" aria-label="info" aria-haspopup="dialog"><svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="info" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="256" height="256"><path d="M26 16c0 5.523-4.477 10-10 10S6 21.523 6 16 10.477 6 16 6s10 4.477 10 10zm2 0c0 6.627-5.373 12-12 12S4 22.627 4 16 9.373 4 16 4s12 5.373 12 12z"/><path d="M16 12.75a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM16 22.25c-.552 0-1-.392-1-.875v-6.25c0-.483.448-.875 1-.875s1 .392 1 .875v6.25c0 .483-.448.875-1 .875z"/></svg></button>
     <div id="info-overlay" role="dialog" aria-modal="true" aria-label="About this site" hidden>
         <div id="info-box">
             <button id="info-close" aria-label="close">&times;</button>
-            <p>Hey! This site is designed to have loads of cool features and effects. For example, when a text is in a differant colour like <a href="/">this</a> it means it is a clickable link. For the best experiance you can use a mouse on desktop. I've added hover effects so when you mouse is over somthing like a link it raises itself slightly to show you are about to click on it.</p>
+            <p>Hey! This site is designed to have loads of cool features and effects. For example, when a text is in a differant colour like <a href="{{ url_for('index') }}">this</a> it means it is a clickable link. For the best experiance you can use a mouse on desktop. I've added hover effects so when you mouse is over somthing like a link it raises itself slightly to show you are about to click on it.</p>
             <br>
             <p>When typing my email address further down this page instead of using the @ symbol I have writen the word [at], this is because ai bots often come to websites and copy all the infomation and sell it to companies, I don't want my inbox flooded with spam so I use this to protect myself. <i>I have also obfuscated the email inline.</i></p>
             <br>
@@ -32,10 +24,10 @@
     <p>It would be super cool if you take a look at <a target="_blank" rel="noopener noreferrer" href="https://blog.freddieyershon.co.uk">my blog</a>, I don't write very often but I love it if you take a look.</p> 
     <div class="photos">
         <h3>Photos</h3>
-        <a href="photo/"><img src="assets/IMG_1595.JPG"></a>
-        <a href="photo/"><img src="assets/IMG_1683.JPG"></a>
-        <a href="photo/"><img src="assets/IMG_1685.JPG"></a>
-        <a href="photo/"><img src="assets/IMG_1729.JPG"></a>
+        <a href="{{ url_for('photo') }}"><img src="{{ url_for('static', filename='assets/IMG_1595.JPG') }}"></a>
+        <a href="{{ url_for('photo') }}"><img src="{{ url_for('static', filename='assets/IMG_1683.JPG') }}"></a>
+        <a href="{{ url_for('photo') }}"><img src="{{ url_for('static', filename='assets/IMG_1685.JPG') }}"></a>
+        <a href="{{ url_for('photo') }}"><img src="{{ url_for('static', filename='assets/IMG_1729.JPG') }}"></a>
     </div>
     <h3>Blog</h3>
     <div class="blog">
@@ -55,23 +47,21 @@
     </div>
     <div class="buttons">
         <h3>Buttons :></h3>
-        <a target="_blank" rel="noopener noreferrer" href="https://hackclub.com"><img src="assets/buttons/hackclub.png"></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com"><img src="assets/buttons/github.png"></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com"><img src="assets/buttons/vscode.png"></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://minecraft.com"><img src="assets/buttons/minecraft.gif"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://hackclub.com"><img src="{{ url_for('static', filename='assets/buttons/hackclub.png') }}"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com"><img src="{{ url_for('static', filename='assets/buttons/github.png') }}"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com"><img src="{{ url_for('static', filename='assets/buttons/vscode.png') }}"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://minecraft.com"><img src="{{ url_for('static', filename='assets/buttons/minecraft.gif') }}"></a>
         <br>
-        <a id="mybutton" href="https://freddieyershon.co.uk"><img src="assets/buttons/freddie-v4.svg"></a><br>
-        <small>this is my button, add it to your site, if you dare :><br>you can also use <a target="_blank" rel="noopener noreferrer" href="assets\buttons\freddie-v3.png">this</a> .png!</small>
+        <a id="mybutton" href="https://freddieyershon.co.uk"><img src="{{ url_for('static', filename='assets/buttons/freddie-v4.svg') }}"></a><br>
+        <small>this is my button, add it to your site, if you dare :><br>you can also use <a target="_blank" rel="noopener noreferrer" href="{{ url_for('static', filename='assets/buttons/freddie-v3.png') }}">this</a> .png!</small>
         <h4>my friends who have buttons</h4>
         <a id="mybutton" target="_blank" rel="noopener noreferrer" href="https://brny.dev"><img src="https://user-cdn.hackclub-assets.com/019f0052-e088-7aea-a6cd-0dc5fcaffa4c/badge.png"></a>
         <a id="mybutton" target="_blank" rel="noopener noreferrer" href="https://stelle.codes"><img src="https://stelle.codes/button.png"></a>
         <a id="mybutton" target="_blank" rel="noopener noreferrer" href="https://adityan.dev"><img src="https://cdn.adityan.dev/88x31"></a>
     </div>
-    <footer>
-    <hr>
-      <p>Made with ❤️ by Freddie</p>
-      <p>This site is inspired by <a target="_blank" rel="noopener noreferrer" href="https://zaids-bunker.vercel.app/">Zaid's Bunker</a> and <a target="_blank" rel="noopener noreferrer" href="https://brny.dev/">brny.dev</a>!</p>
-      <pagering-link theme="light"></pagering-link>
+{% endblock %}
+
+{% block footer_extra %}
       <iframe
           src="https://webring.hackclub.com/embed.html"
           width="150"
@@ -81,27 +71,4 @@
           alt="Hack Club Webring!"
       ></iframe>
       <br>
-<!-- All Github  footer stuff is vibe coded :sob:!! -->
-      <div class="footer-commit" id="footer-commit" data-owner="hippogriff101" data-repo="The-Freddie-Site">
-          <a
-            class="commit-link"
-            href="https://github.com/hippogriff101/The-Freddie-Site/commits/main"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-                    <span class="commit-icon" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
-                        </svg>
-                    </span>
-          <span class="commit-text">Latest commit</span>
-          <span class="commit-hash">(latest)</span>
-          </a>
-      </div>
-  </footer>
-    <script src="script.js"></script>
-    <script data-goatcounter="https://hippogriff.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-    <script src="https://pagering.gideon.sh/embed.js" defer></script>
-</body>
-</html>
+{% endblock %}

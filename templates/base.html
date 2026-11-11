@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Freddie Yershon</title>
-    <link rel="icon" type="image/x-icon" href="/assets/pixel-dog.ico">
-    <link href="../styles.css" rel="stylesheet">
+    <meta name="description" content="{% block description %}Hi, I'm Freddie, a teen coder from London. Welcome to my website!{% endblock %}">
+    {% block robots %}{% endblock %}
+    <title>{% block title %}Freddie Yershon{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/pixel-dog.ico') }}">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    {% block head %}{% endblock %}
 </head>
 <body>
-    <h1>Freddie Yershon</h1>
-    <small>/ <a href="../">home</a> / <a href="../now/">now</a> / <a href="../projects/">projects</a> / <a href="../photo/">photos</a> / <a href="./">guestbook</a> / <a target="_blank" rel="noopener noreferrer" href="https://blog.freddieyershon.co.uk">blog</a> /</small>
-    <hr>
-    <h2>Coming soon!</h2>
-    <p>This page is still under construction, check back soon! If you have any ideas for the way I add a guest book email me!</p>
+    <h1>{% block heading %}Freddie Yershon{% endblock %}</h1>
+    <small>/ <a href="{{ url_for('index') }}">home</a> / <a href="{{ url_for('now') }}">now</a> / <a href="{{ url_for('projects') }}">projects</a> / <a href="{{ url_for('photo') }}">photos</a> / <a href="{{ url_for('guest') }}">guestbook</a> / <a target="_blank" rel="noopener noreferrer" href="https://blog.freddieyershon.co.uk">blog</a> /</small>
+{% block content %}{% endblock %}
     <footer>
     <hr>
       <p>Made with ❤️ by Freddie</p>
       <p>This site is inspired by <a target="_blank" rel="noopener noreferrer" href="https://zaids-bunker.vercel.app/">Zaid's Bunker</a> and <a target="_blank" rel="noopener noreferrer" href="https://brny.dev/">brny.dev</a>!</p>
       <pagering-link theme="light"></pagering-link>
+{% block footer_extra %}{% endblock %}
 <!-- All Github  footer stuff is vibe coded :sob:!! -->
       <div class="footer-commit" id="footer-commit" data-owner="hippogriff101" data-repo="The-Freddie-Site">
           <a
@@ -37,7 +38,7 @@
           </a>
       </div>
   </footer>
-    <script src="../script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script data-goatcounter="https://hippogriff.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
     <script src="https://pagering.gideon.sh/embed.js" defer></script>

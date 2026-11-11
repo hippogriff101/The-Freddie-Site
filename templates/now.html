@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block robots %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+
+{% block content %}
+    <hr>
+    <h2>Take a look at what's going on with me NOW!</h2>
+    <p>Over in London it is <span id="date">Lousday 78th Marks 2100, 25:98</span></p>
+    <h3>Hackatime Stats</h3>
+    <img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=669&api_domain=hackatime.hackclub.com&theme=darcula&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8">
+    <a target="_blank" rel="noreferrer" href="https://heatmap.shymike.dev?id=669&timezone=Europe%2FLondon&labels=true&year=current&standalone=true" title="Click to view detailed data for each day!">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://heatmap.shymike.dev?id=669&timezone=Europe%2FLondon&labels=true&year=current&theme=dark">
+            <img alt="Hackatime activity heatmap" src="https://heatmap.shymike.dev?id=669&timezone=Europe%2FLondon&labels=true&year=current&theme=light">
+        </picture>
+    </a>
+{% endblock %}
