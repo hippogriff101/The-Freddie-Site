@@ -10,10 +10,13 @@ sitemapper.init_app(app)
 with open(app.static_folder + "/projects.json", encoding="utf-8") as f:
     project_list = json.load(f)
 
+with open(app.static_folder + "/photos.json", encoding="utf-8") as f:
+    photo_list = json.load(f)
+
 @sitemapper.include()
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", photos=photo_list)
 
 @sitemapper.include()
 @app.route("/now/")
@@ -28,7 +31,7 @@ def projects():
 @sitemapper.include()
 @app.route("/photo/")
 def photo():
-    return render_template("photo.html")
+    return render_template("photo.html", photos=photo_list)
 
 @sitemapper.include()
 @app.route("/guest/")
